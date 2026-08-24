@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RMSO Recruitment Application</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070b12;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #050910;
+            border-bottom: 1px solid #26384d;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .brand span {
+            color: #4da3ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #4da3ff;
+        }
+
+        /* PAGE */
+
+        .page {
+            max-width: 850px;
+
+            margin: 80px auto;
+
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .header .icon {
+            font-size: 60px;
+
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+        .header h1 span {
+            color: #4da3ff;
+        }
+
+        .header p {
+            color: #94a5b8;
+
+            line-height: 1.7;
+        }
+
+        /* FORM */
+
+        .application {
+            background: #101a27;
+
+            border: 1px solid #263b53;
+
+            border-radius: 12px;
+
+            padding: 35px;
+        }
+
+        .form-section {
+            margin-bottom: 35px;
+        }
+
+        .form-section h2 {
+            font-size: 21px;
+
+            margin-bottom: 20px;
+
+            color: #4da3ff;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+        }
+
+        .required {
+            color: #ff6b6b;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+
+            padding: 13px 14px;
+
+            background: #080e17;
+
+            color: white;
+
+            border: 1px solid #2b4057;
+
+            border-radius: 6px;
+
+            outline: none;
+
+            font-size: 15px;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #4da3ff;
+        }
+
+        textarea {
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        /* CHECKBOX */
+
+        .checkbox {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            margin-bottom: 12px;
+
+            color: #b5c2cf;
+        }
+
+        .checkbox input {
+            width: auto;
+
+            margin-top: 5px;
+        }
+
+        /* BUTTON */
+
+        .submit-area {
+            text-align: center;
+
+            margin-top: 35px;
+        }
+
+        button {
+            border: none;
+
+            background: #287dcc;
+
+            color: white;
+
+            padding: 15px 35px;
+
+            border-radius: 6px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #3d9bea;
+
+            transform: translateY(-2px);
+        }
+
+        .notice {
+            margin-top: 20px;
+
+            padding: 15px;
+
+            background: #0b1420;
+
+            border-left: 3px solid #4da3ff;
+
+            color: #94a5b8;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+
+            color: #718196;
+
+            padding: 30px 20px;
+
+            border-top: 1px solid #1d2b3b;
+
+            margin-top: 50px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            .page {
+                margin-top: 50px;
+            }
+
+            .application {
+                padding: 25px 20px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="brand">
+            RMSO <span>SHERIFF'S OFFICE</span>
+        </div>
+
+        <a href="index.html">
+            ← Back to Home
+        </a>
+
+    </nav>
+
+
+    <!-- PAGE -->
+
+    <main class="page">
+
+        <div class="header">
+
+            <div class="icon">
+                📝
+            </div>
+
+            <h1>
+                RMSO <span>Recruitment</span>
+            </h1>
+
+            <p>
+                Thank you for your interest in joining
+                the Richmond Metropolitan Sheriff's Office.
+            </p>
+
+            <p>
+                Please complete the application below
+                honestly and professionally.
+            </p>
+
+        </div>
+
+
+        <!-- APPLICATION -->
+
+        <form
+            class="application"
+            action="https://discord.gg/2Z93qmAWH"
+            method="get"
+            target="_blank"
+        >
+
+
+            <!-- PERSONAL INFORMATION -->
+
+            <div class="form-section">
+
+                <h2>
+                    Personal Information
+                </h2>
+
+
+                <div class="field">
+
+                    <label>
+                        Discord Username
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="discord"
+                        placeholder="Example: username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Roblox Username
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="roblox"
+                        placeholder="Your Roblox username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Age
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="number"
+                        name="age"
+                        min="13"
+                        max="100"
+                        placeholder="Your age"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Time Zone
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="timezone"
+                        placeholder="Example: EST"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPERIENCE -->
+
+            <div class="form-section">
+
+                <h2>
+                    Experience
+                </h2>
+
+
+                <div class="field">
+
+                    <label>
+                        Previous ERLC Experience
+                        <span class="required">*</span>
+                    </label>
+
+                    <select
+                        name="experience"
+                        required
+                    >
+
+                        <option value="">
+                            Select one
+                        </option>
+
+                        <option value="none">
+                            No experience
+                        </option>
+
+                        <option value="some">
+                            Some experience
+                        </option>
+
+                        <option value="experienced">
+                            Experienced
+                        </option>
+
+                        <option value="advanced">
+                            Highly experienced
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Previous Law Enforcement RP Experience
+                    </label>
+
+                    <textarea
+                        name="previous"
+                        placeholder="Tell us about your previous experience."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Why do you want to join RMSO?
+                        <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                        name="why"
+                        placeholder="Explain why you want to join."
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCENARIOS -->
+
+            <div class="form-section">
+
+                <h2>
+                    Scenario Questions
+                </h2>
+
+
+                <div class="field">
+
+                    <label>
+                        What would you do if another officer
+                        was breaking department rules?
+                        <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                        name="scenario1"
+                        placeholder="Your answer..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        What would you do during a high-risk
+                        traffic stop?
+                        <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                        name="scenario2"
+                        placeholder="Your answer..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        How would you handle an angry civilian?
+                        <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                        name="scenario3"
+                        placeholder="Your answer..."
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- RULES -->
+
+            <div class="form-section">
+
+                <h2>
+                    Agreement
+                </h2>
+
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>
+                        I agree to follow RMSO rules,
+                        policies, and leadership instructions.
+                    </span>
+
+                </label>
+
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>
+                        I understand that false information
+                        may result in application denial.
+                    </span>
+
+                </label>
+
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>
+                        I understand that submitting an
+                        application does not guarantee acceptance.
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <div class="submit-area">
+
+                <button type="submit">
+                    Submit Application
+                </button>
+
+            </div>
+
+
+            <div class="notice">
+
+                <strong>
+                    Important:
+                </strong>
+
+                This application page currently sends the
+                applicant to the RMSO Discord after submission.
+                We can connect this to an actual application
+                system next so applications are automatically
+                recorded and delivered to your staff.
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            <strong>
+                Richmond Metropolitan Sheriff's Office
+            </strong>
+        </p>
+
+        <p>
+            © 2026 RMSO • ERLC Roleplay Community
+        </p>
+
+        <p>
+            Fictional roleplay organization.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
