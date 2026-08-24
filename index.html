@@ -7,6 +7,7 @@
     <title>Richmond Metropolitan Sheriff's Office</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -16,8 +17,9 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #080d14;
-            color: #ffffff;
+            background: #070b12;
+            color: white;
+            line-height: 1.6;
         }
 
         /* =========================
@@ -31,55 +33,46 @@
             width: 100%;
             z-index: 1000;
 
-            background: rgba(5, 10, 18, 0.97);
-            border-bottom: 1px solid #26384d;
+            background: rgba(5, 9, 16, 0.96);
 
-            padding: 12px 6%;
+            border-bottom: 1px solid #24364b;
+
+            padding: 18px 7%;
 
             display: flex;
-            align-items: center;
             justify-content: space-between;
-        }
-
-        .logo-area {
-            display: flex;
             align-items: center;
-            gap: 12px;
         }
 
-        .nav-logo {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-        }
-
-        .logo-text {
-            font-size: 18px;
+        .brand {
+            font-size: 19px;
             font-weight: bold;
             letter-spacing: 1px;
         }
 
-        .logo-text span {
+        .brand span {
             color: #4da3ff;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 28px;
         }
 
         nav a {
-            color: #ffffff;
+            color: white;
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
+
             transition: 0.3s;
         }
 
         nav a:hover {
             color: #4da3ff;
         }
+
 
         /* =========================
            HERO
@@ -89,48 +82,36 @@
             min-height: 100vh;
 
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
 
             text-align: center;
 
-            padding: 140px 20px 80px;
+            padding: 130px 20px 80px;
 
             background:
-                linear-gradient(
-                    rgba(5, 10, 18, 0.80),
-                    rgba(5, 10, 18, 0.97)
-                ),
                 radial-gradient(
                     circle at center,
-                    #17304d 0%,
-                    #080d14 65%
+                    #183451 0%,
+                    #070b12 65%
                 );
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 950px;
         }
 
-        .hero-logo {
-            width: 200px;
-            height: 200px;
-
-            object-fit: contain;
-
+        .hero-symbol {
+            font-size: 70px;
             margin-bottom: 25px;
-
-            filter:
-                drop-shadow(0 0 12px rgba(77, 163, 255, 0.4))
-                drop-shadow(0 0 30px rgba(77, 163, 255, 0.15));
         }
 
         .hero h1 {
-            font-size: clamp(38px, 7vw, 76px);
+            font-size: clamp(40px, 7vw, 78px);
 
             line-height: 1.05;
 
-            margin-bottom: 22px;
+            margin-bottom: 25px;
         }
 
         .hero h1 span {
@@ -138,14 +119,17 @@
         }
 
         .hero p {
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #b7c4d2;
+
             font-size: 19px;
-
-            color: #b9c5d2;
-
-            line-height: 1.7;
 
             margin-bottom: 35px;
         }
+
 
         /* =========================
            BUTTONS
@@ -164,7 +148,7 @@
         .btn {
             display: inline-block;
 
-            padding: 14px 25px;
+            padding: 14px 27px;
 
             border-radius: 6px;
 
@@ -175,34 +159,35 @@
             transition: 0.3s;
         }
 
-        .btn-primary {
+        .primary {
             background: #287dcc;
 
             color: white;
         }
 
-        .btn-primary:hover {
-            background: #3e99ed;
+        .primary:hover {
+            background: #3d9bea;
 
             transform: translateY(-3px);
         }
 
-        .btn-secondary {
+        .secondary {
             border: 1px solid #4da3ff;
 
-            color: #ffffff;
+            color: white;
         }
 
-        .btn-secondary:hover {
+        .secondary:hover {
             background: #4da3ff;
 
-            color: #08101a;
+            color: #07101a;
 
             transform: translateY(-3px);
         }
 
+
         /* =========================
-           GENERAL SECTIONS
+           SECTIONS
         ========================= */
 
         section {
@@ -218,44 +203,90 @@
         .section-title h2 {
             font-size: 38px;
 
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .section-title p {
-            color: #8fa0b2;
+            color: #8292a5;
         }
+
 
         /* =========================
            ABOUT
         ========================= */
 
         .about {
-            background: #0c131d;
+            background: #0b121c;
         }
 
-        .about-content {
-            max-width: 900px;
+        .about-text {
+            max-width: 850px;
 
             margin: auto;
 
             text-align: center;
 
-            color: #b9c5d2;
-
-            line-height: 1.8;
+            color: #b8c5d3;
 
             font-size: 17px;
         }
 
+
         /* =========================
-           CARDS
+           STATISTICS
         ========================= */
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 20px;
+
+            max-width: 1000px;
+
+            margin: 50px auto 0;
+        }
+
+        .stat {
+            text-align: center;
+
+            padding: 30px;
+
+            background: #101a27;
+
+            border: 1px solid #22364d;
+
+            border-radius: 10px;
+        }
+
+        .stat h3 {
+            font-size: 36px;
+
+            color: #4da3ff;
+
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            color: #8999ab;
+        }
+
+
+        /* =========================
+           COMMAND
+        ========================= */
+
+        .command {
+            background: #070b12;
+        }
 
         .cards {
             display: grid;
 
             grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
+                repeat(auto-fit, minmax(230px, 1fr));
 
             gap: 20px;
 
@@ -267,11 +298,11 @@
         .card {
             background: #101a27;
 
-            border: 1px solid #23364b;
-
-            padding: 30px;
+            border: 1px solid #24384e;
 
             border-radius: 10px;
+
+            padding: 30px;
 
             text-align: center;
 
@@ -282,9 +313,6 @@
             transform: translateY(-6px);
 
             border-color: #4da3ff;
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.25);
         }
 
         .card-icon {
@@ -294,25 +322,7 @@
         }
 
         .card h3 {
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #94a5b8;
-
-            line-height: 1.6;
-        }
-
-        /* =========================
-           COMMAND STAFF
-        ========================= */
-
-        .command {
-            background: #0c131d;
-        }
-
-        .staff-card {
-            text-align: center;
+            margin-bottom: 8px;
         }
 
         .rank {
@@ -326,8 +336,22 @@
 
             letter-spacing: 1px;
 
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
+
+        .card p {
+            color: #91a1b3;
+        }
+
+
+        /* =========================
+           DIVISIONS
+        ========================= */
+
+        .divisions {
+            background: #0b121c;
+        }
+
 
         /* =========================
            RECRUITMENT
@@ -340,19 +364,22 @@
                 linear-gradient(
                     135deg,
                     #0c1724,
-                    #101d2c
+                    #101e2e
                 );
         }
 
-        .recruitment p {
-            max-width: 700px;
+        .recruitment-content {
+            max-width: 750px;
 
-            margin: 0 auto 15px;
-
-            color: #b9c5d2;
-
-            line-height: 1.7;
+            margin: auto;
         }
+
+        .recruitment p {
+            color: #b5c2cf;
+
+            margin-bottom: 25px;
+        }
+
 
         /* =========================
            DISCORD
@@ -361,7 +388,7 @@
         .discord {
             text-align: center;
 
-            background: #080d14;
+            background: #070b12;
         }
 
         .discord-box {
@@ -369,50 +396,52 @@
 
             margin: auto;
 
-            padding: 45px 30px;
-
-            border: 1px solid #26384d;
+            padding: 50px 30px;
 
             border-radius: 12px;
 
             background: #101a27;
+
+            border: 1px solid #263b53;
         }
 
         .discord-box h2 {
+            font-size: 32px;
+
             margin-bottom: 15px;
         }
 
         .discord-box p {
-            color: #94a5b8;
+            color: #91a1b3;
 
             margin-bottom: 25px;
-
-            line-height: 1.7;
         }
+
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
-            background: #050a10;
+            text-align: center;
+
+            background: #04070c;
 
             border-top: 1px solid #1d2b3b;
 
             padding: 35px 20px;
 
-            text-align: center;
-
-            color: #718297;
+            color: #718196;
         }
 
         footer strong {
-            color: #ffffff;
+            color: white;
         }
 
         footer p {
-            margin: 6px 0;
+            margin: 6px;
         }
+
 
         /* =========================
            MOBILE
@@ -421,16 +450,7 @@
         @media (max-width: 700px) {
 
             nav {
-                padding: 10px 18px;
-            }
-
-            .nav-logo {
-                width: 38px;
-                height: 38px;
-            }
-
-            .logo-text {
-                font-size: 13px;
+                padding: 15px 20px;
             }
 
             nav ul {
@@ -441,9 +461,8 @@
                 padding-top: 120px;
             }
 
-            .hero-logo {
-                width: 150px;
-                height: 150px;
+            .hero-symbol {
+                font-size: 55px;
             }
 
             .hero p {
@@ -457,11 +476,15 @@
             .section-title h2 {
                 font-size: 30px;
             }
+
         }
+
     </style>
+
 </head>
 
 <body>
+
 
     <!-- =========================
          NAVIGATION
@@ -469,19 +492,8 @@
 
     <nav>
 
-        <div class="logo-area">
-
-            <img
-                class="nav-logo"
-                src="rmso-logo.png"
-                alt="RMSO Logo"
-            >
-
-            <div class="logo-text">
-                RMSO
-                <span>SHERIFF'S OFFICE</span>
-            </div>
-
+        <div class="brand">
+            RMSO <span>SHERIFF'S OFFICE</span>
         </div>
 
         <ul>
@@ -511,6 +523,7 @@
     </nav>
 
 
+
     <!-- =========================
          HERO
     ========================= -->
@@ -519,27 +532,38 @@
 
         <div class="hero-content">
 
-            <img
-                class="hero-logo"
-                src="rmso-logo.png"
-                alt="Richmond Metropolitan Sheriff's Office Logo"
-            >
+            <div class="hero-symbol">
+                🚔
+            </div>
 
             <h1>
-                Richmond Metropolitan<br>
-                <span>Sheriff's Office</span>
+
+                Richmond Metropolitan
+
+                <br>
+
+                <span>
+                    Sheriff's Office
+                </span>
+
             </h1>
 
             <p>
-                Integrity. Service. Protection.<br>
-                Serving the Richmond Metropolitan community
-                through professionalism, dedication, and teamwork.
+
+                Integrity. Service. Protection.
+
+                <br>
+
+                A professional ERLC roleplay organization
+                dedicated to realistic law enforcement
+                operations and community engagement.
+
             </p>
 
             <div class="buttons">
 
                 <a
-                    class="btn btn-primary"
+                    class="btn primary"
                     href="https://discord.gg/2Z93qmAWH"
                     target="_blank"
                 >
@@ -547,10 +571,10 @@
                 </a>
 
                 <a
-                    class="btn btn-secondary"
+                    class="btn secondary"
                     href="#recruitment"
                 >
-                    📝 Recruitment
+                    📝 Apply Today
                 </a>
 
             </div>
@@ -558,6 +582,7 @@
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -568,36 +593,100 @@
 
         <div class="section-title">
 
-            <h2>About RMSO</h2>
+            <h2>
+                About RMSO
+            </h2>
 
             <p>
-                Committed to the community we serve.
+                Serving the community with professionalism.
             </p>
 
         </div>
 
-        <div class="about-content">
+        <div class="about-text">
 
             <p>
+
                 The Richmond Metropolitan Sheriff's Office
-                is a dedicated roleplay law enforcement
-                organization focused on creating professional,
-                realistic, and enjoyable experiences for our
-                community.
+                is an ERLC roleplay law enforcement organization
+                built around professionalism, realism,
+                teamwork, and community.
+
             </p>
 
             <br>
 
             <p>
-                Our members are expected to demonstrate
-                professionalism, respect, accountability,
-                and teamwork both on duty and within our
-                community.
+
+                Our goal is to provide members with a structured
+                department where they can participate in patrol
+                operations, training, communications, investigations,
+                and other law enforcement activities.
+
             </p>
 
         </div>
 
+
+        <!-- STATISTICS -->
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <h3>
+                    24/7
+                </h3>
+
+                <p>
+                    Community
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>
+                    4+
+                </h3>
+
+                <p>
+                    Divisions
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>
+                    100%
+                </h3>
+
+                <p>
+                    Teamwork
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>
+                    2026
+                </h3>
+
+                <p>
+                    Established
+                </p>
+
+            </div>
+
+        </div>
+
     </section>
+
 
 
     <!-- =========================
@@ -608,17 +697,21 @@
 
         <div class="section-title">
 
-            <h2>Command Staff</h2>
+            <h2>
+                Command Staff
+            </h2>
 
             <p>
-                Leadership of the Richmond Metropolitan Sheriff's Office.
+                Department leadership.
             </p>
 
         </div>
 
+
         <div class="cards">
 
-            <div class="card staff-card">
+
+            <div class="card">
 
                 <div class="card-icon">
                     ⭐
@@ -633,14 +726,15 @@
                 </h3>
 
                 <p>
-                    Responsible for overall department
-                    leadership and operations.
+                    Oversees the entire department and
+                    establishes department standards.
                 </p>
 
             </div>
 
 
-            <div class="card staff-card">
+
+            <div class="card">
 
                 <div class="card-icon">
                     🛡️
@@ -656,13 +750,14 @@
 
                 <p>
                     Assists the Sheriff with department
-                    administration and command operations.
+                    administration and operations.
                 </p>
 
             </div>
 
 
-            <div class="card staff-card">
+
+            <div class="card">
 
                 <div class="card-icon">
                     ⭐
@@ -677,8 +772,31 @@
                 </h3>
 
                 <p>
-                    Oversees departmental divisions and
-                    operational standards.
+                    Oversees divisions and ensures
+                    operational standards are maintained.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👮
+                </div>
+
+                <div class="rank">
+                    Command Staff
+                </div>
+
+                <h3>
+                    Department Leadership
+                </h3>
+
+                <p>
+                    Supports department leadership and
+                    supervises daily operations.
                 </p>
 
             </div>
@@ -688,23 +806,28 @@
     </section>
 
 
+
     <!-- =========================
          DIVISIONS
     ========================= -->
 
-    <section id="divisions">
+    <section class="divisions" id="divisions">
 
         <div class="section-title">
 
-            <h2>Our Divisions</h2>
+            <h2>
+                Department Divisions
+            </h2>
 
             <p>
-                Explore the divisions within RMSO.
+                Specialized units within RMSO.
             </p>
 
         </div>
 
+
         <div class="cards">
+
 
             <div class="card">
 
@@ -717,12 +840,16 @@
                 </h3>
 
                 <p>
-                    Provides routine patrol, traffic
-                    enforcement, and emergency response
-                    throughout the community.
+
+                    Handles routine patrol,
+                    traffic enforcement,
+                    emergency calls, and
+                    community response.
+
                 </p>
 
             </div>
+
 
 
             <div class="card">
@@ -736,12 +863,15 @@
                 </h3>
 
                 <p>
-                    Responsible for preparing new members
-                    and maintaining department training
-                    standards.
+
+                    Provides recruit training,
+                    evaluations, certifications,
+                    and continued education.
+
                 </p>
 
             </div>
+
 
 
             <div class="card">
@@ -755,11 +885,15 @@
                 </h3>
 
                 <p>
-                    Maintains accountability and investigates
-                    alleged violations of department policy.
+
+                    Handles professional standards,
+                    complaints, investigations,
+                    and accountability.
+
                 </p>
 
             </div>
+
 
 
             <div class="card">
@@ -773,8 +907,55 @@
                 </h3>
 
                 <p>
-                    Supports field operations through dispatch,
-                    communications, and emergency coordination.
+
+                    Coordinates dispatch,
+                    emergency communications,
+                    and field operations.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Investigations
+                </h3>
+
+                <p>
+
+                    Conducts investigations,
+                    gathers evidence, and
+                    supports department operations.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🚨
+                </div>
+
+                <h3>
+                    Special Operations
+                </h3>
+
+                <p>
+
+                    Handles specialized
+                    situations and high-risk
+                    department operations.
+
                 </p>
 
             </div>
@@ -784,44 +965,62 @@
     </section>
 
 
+
     <!-- =========================
          RECRUITMENT
     ========================= -->
 
     <section class="recruitment" id="recruitment">
 
-        <div class="section-title">
+        <div class="recruitment-content">
 
-            <h2>Join RMSO</h2>
+            <div class="section-title">
+
+                <h2>
+                    Join RMSO
+                </h2>
+
+                <p>
+                    Your career starts here.
+                </p>
+
+            </div>
+
 
             <p>
-                Are you ready to serve?
+
+                Are you interested in becoming part of
+                the Richmond Metropolitan Sheriff's Office?
+
             </p>
+
+
+            <p>
+
+                We're looking for dedicated,
+                respectful, and active members
+                who want to participate in
+                professional ERLC roleplay.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    class="btn primary"
+                    href="https://discord.gg/2Z93qmAWH"
+                    target="_blank"
+                >
+                    📝 Start Your Application
+                </a>
+
+            </div>
 
         </div>
 
-        <p>
-            We're always looking for dedicated members who
-            want to become part of the Richmond Metropolitan
-            Sheriff's Office.
-        </p>
-
-        <p>
-            Join our Discord to learn more about recruitment,
-            training, and department opportunities.
-        </p>
-
-        <br>
-
-        <a
-            class="btn btn-primary"
-            href="https://discord.gg/2Z93qmAWH"
-            target="_blank"
-        >
-            🚔 Join the Department
-        </a>
-
     </section>
+
 
 
     <!-- =========================
@@ -833,27 +1032,30 @@
         <div class="discord-box">
 
             <h2>
-                Join Our Community
+                Join Our Discord
             </h2>
 
             <p>
-                Connect with the Richmond Metropolitan
-                Sheriff's Office community, meet other
-                members, receive announcements, and stay
-                up to date with department activities.
+
+                Get department announcements,
+                applications, training information,
+                events, and community updates.
+
             </p>
 
+
             <a
-                class="btn btn-primary"
+                class="btn primary"
                 href="https://discord.gg/2Z93qmAWH"
                 target="_blank"
             >
-                💬 Enter Discord
+                💬 Join the RMSO Discord
             </a>
 
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -863,20 +1065,30 @@
     <footer>
 
         <p>
+
             <strong>
                 Richmond Metropolitan Sheriff's Office
             </strong>
+
         </p>
 
+
         <p>
+
             © 2026 RMSO • ERLC Roleplay Community
+
         </p>
 
+
         <p>
-            This is a fictional roleplay organization.
+
+            This website and department are part
+            of a fictional roleplay community.
+
         </p>
 
     </footer>
+
 
 </body>
 </html>
